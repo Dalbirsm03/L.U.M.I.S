@@ -4,26 +4,31 @@ L.U.M.I.S is an AI-powered multimodal assistant that integrates real-time screen
 The system detects on-screen errors, provides real-time code corrections, and extracts key insights from videos, documents, and websites.
 
 ## Features
-**Real-Time Code Assistance**
+**Real-Time Code Assistance**:
 
-Uses screen recording, mouse tracking, and audio analysis to detect errors.
-Provides instant corrections and debugging suggestions for code.
-**Multimodal AI Capabilities**
+- Uses screen recording, mouse tracking, and audio analysis to detect errors.
+-Provides instant corrections and debugging suggestions for code.
 
-Supports text, audio, and video input for enhanced AI interactions.
-Retrieval-Augmented Generation (RAG) improves accuracy and response relevance.
-**Content Summarization & Insights**
+**Multimodal AI Capabilities**:
 
-Summarizes documents, research papers, and long texts.
-Extracts key insights, timestamps, and highlights from YouTube videos and websites.
-**Intelligent Query Processing**
+-Supports text, audio, and video input for enhanced AI interactions.
+-Retrieval-Augmented Generation (RAG) improves accuracy and response relevance.
 
-Enhances information retrieval with context-aware AI responses.
-Supports question-answering and topic-based search using NLP.
-**User Feedback & Continuous Improvement**
+**Content Summarization & Insights**:
 
-Collects user feedback to refine query handling and response accuracy.
-Learns from interactions to improve personalization and efficiency.
+-Summarizes documents, research papers, and long texts.
+-Extracts key insights, timestamps, and highlights from YouTube videos and websites.
+
+**Intelligent Query Processing**:
+
+-Enhances information retrieval with context-aware AI responses.
+-Supports question-answering and topic-based search using NLP.
+
+**User Feedback & Continuous Improvement**:
+
+-Collects user feedback to refine query handling and response accuracy.
+-Learns from interactions to improve personalization and efficiency.
+
 **Technologies Used**
 
 Large Language Models (LLMs) & Generative AI
