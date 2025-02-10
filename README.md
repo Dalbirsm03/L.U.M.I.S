@@ -1,19 +1,27 @@
-Overview
-L.U.M.I.S is an advanced AI-powered assistant integrating multimodal learning, real-time analysis, and intelligent automation.
-Supports screen recording (video input), audio, and mouse interactions to detect errors and provide real-time code corrections.
-Offers Retrieval-Augmented Generation (RAG), text generation, summarization, and video information extraction.
-Features
-1. Personal AI Assistant
-Real-time code correction using screen recording, audio, and mouse tracking.
-Detects on-screen errors, syntax issues, and logical flaws in code.
-Provides suggestions and fixes dynamically.
-2. Multimodal AI Functionalities
-Retrieval-Augmented Generation (RAG) for enhanced AI responses.
-Summarization of long texts, including research papers, documents, and news.
-YouTube & website video information extraction (key insights, timestamps, and summaries).
+## L.U.M.I.S (LLM-Based Unified Multimodal Intelligent System)
+L.U.M.I.S is an AI-powered multimodal assistant that integrates real-time screen analysis, audio interactions, and Retrieval-Augmented Generation (RAG) to assist users with coding, information extraction, and intelligent automation.
+
+The system detects on-screen errors, provides real-time code corrections, and extracts key insights from videos, documents, and websites.
+
+## Features
+**Real-Time Code Assistance**
+Uses screen recording, mouse tracking, and audio analysis to detect errors.
+Provides instant corrections and debugging suggestions for code.
+Multimodal AI Capabilities
+Supports text, audio, and video input for enhanced AI interactions.
+Retrieval-Augmented Generation (RAG) improves accuracy and response relevance.
+Content Summarization & Insights
+Summarizes documents, research papers, and long texts.
+Extracts key insights, timestamps, and highlights from YouTube videos and websites.
+Intelligent Query Processing
+Enhances information retrieval with context-aware AI responses.
+Supports question-answering and topic-based search using NLP.
+User Feedback & Continuous Improvement
+Collects user feedback to refine query handling and response accuracy.
+Learns from interactions to improve personalization and efficiency.
 Technologies Used
-LLMs & Generative AI – For natural language understanding and intelligent responses.
-Computer Vision – Screen analysis and real-time error detection.
-Speech & Audio Processing – Voice-based interaction.
-NLP (Natural Language Processing) – Text summarization, rephrasing, and information extraction.
-Retrieval-Augmented Generation (RAG) – Improves AI response relevance.
+Large Language Models (LLMs) & Generative AI
+Computer Vision (for screen analysis and object detection)
+Speech & Audio Processing (for voice-based interactions)
+Natural Language Processing (NLP) (for text summarization and intelligent querying)
+Retrieval
