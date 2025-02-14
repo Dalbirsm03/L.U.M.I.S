@@ -162,10 +162,34 @@ def combine_audio_video():
     audio_clip = mp.AudioFileClip(audio_filename)
     video_clip.set_audio(audio_clip).write_videofile(final_filename, codec='libx264')
 
-def analyze_recording():
-    model = genai.GenerativeModel('gemini-1.5-flash')
-    response = model.generate_content(["Analyze this recording:", final_filename])
+def run_genai_logic_audio(audio_file):
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    my_audio_file = genai.upload_file(path=audio_file)
+    
+    while my_audio_file.state.name == "PROCESSING":
+        time.sleep(5)
+        my_audio_file = genai.get_file(my_audio_file.name)
+    
+    prompt = "Understand the audio and convert the audio into text."
+    response = model.generate_content([my_audio_file, prompt])
     return response.text
+
+def route_based_on_classification(transcribed_text, video_file):
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    prompt = f"""
+    1. **Explanation of the Error**: Analyze the video '{video_file}' and the spoken issue '{transcribed_text}' to identify the specific problem in the code line. Clearly explain the cause of the error.
+    2. **Approach to Solve the Error**: Outline the steps needed to resolve the error, focusing on the necessary code changes or adjustments.
+    3. **Corrected Code**: Provide the corrected version of the code that addresses the identified issue.
+    4. **Summary**: Conclude with a brief summary of the solution, emphasizing the key points and how the changes fix the problem.
+    """
+
+    my_video_file = genai.upload_file(path=video_file)
+    while my_video_file.state.name == "PROCESSING":
+        time.sleep(5)
+        my_video_file = genai.get_file(my_video_file.name)
+    
+    video_response = model.generate_content([my_video_file, prompt])
+    return video_response.text
 
 # 🔹 **Task Execution**
 if task == "YouTube Video Transcription & Summarization":
@@ -216,5 +240,5 @@ elif task == "T.A.P.A.S":
         screen_thread.join()
         combine_audio_video()
         st.success("Recording Completed! Analyzing...")
-        st.write(analyze_recording())
+        st.write(route_based_on_classification(run_genai_logic_audio(audio_filename), video_filename))
 
